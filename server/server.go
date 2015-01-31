@@ -5,7 +5,7 @@ import (
     "net/http"
     "github.com/gorilla/mux"
     "strconv"
-    "sks/store"
+    "github.com/lucastorri/sks/store"
 )
 
 type Server struct {

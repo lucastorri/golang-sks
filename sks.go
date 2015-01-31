@@ -1,7 +1,7 @@
 package main
 
-import "sks/server"
-import "sks/store"
+import "github.com/lucastorri/sks/server"
+import "github.com/lucastorri/sks/store"
 
 func main() {
     port := 12121

@@ -6,5 +6,5 @@ import "github.com/lucastorri/sks/store"
 func main() {
     port := 12121
     dir := "/Users/lucastorri/tmp/data"
-    server.New(port, store.New(dir))
+    server.New(port, store.NewFileStore(dir))
 }

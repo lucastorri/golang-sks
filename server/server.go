@@ -4,19 +4,19 @@ import (
     "io/ioutil"
     "net/http"
     "github.com/gorilla/mux"
-    "strconv"
+    "fmt"
     "github.com/lucastorri/sks/store"
 )
 
 type Server struct {
     server *http.Server
-    Store *store.Store
+    Store store.Store
 }
 
-func New(port int, store *store.Store) (s *Server) {
+func New(port int, store store.Store) (s *Server) {
 
     r := mux.NewRouter()
-    server := &http.Server { Addr: ":" + strconv.FormatInt(int64(port), 10), Handler: r }
+    server := &http.Server { Addr: fmt.Sprintf(":%d", port), Handler: r }
 
     s = &Server { server, store }
 
